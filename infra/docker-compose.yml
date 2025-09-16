@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:14
+    container_name: thejourney-db
+    restart: always
+    environment:
+      POSTGRES_USER: journey_user
+      POSTGRES_PASSWORD: journey_pass
+      POSTGRES_DB: journey_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
+
+
