@@ -20,3 +20,5 @@ class WeightLog(Base):
 
     # Relationship (optional for ORM usage)
     user = relationship("User", back_populates="weights")
+
+# Connecting weight to specific User
